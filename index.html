@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather or Not!</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/styling/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <header class="hero">
+        <h1 class="title">Weather or Not!</h1>
+    </header>
+
+    <!-- main body -->
+    <!-- search button and results -->
+    <main class="flex-row justify-space-between">
+        <div class="col-12 col-md-4">
+            <h3 class="card-header text-uppercase">Search by city</h3>
+            <form id="city-form" class="card-body">
+                <label class="form-label" for="city">City</label>
+                <input name="cityName" id="cityName" type="text" autofocus="true" class="form-input" />
+                <button onclick="weatherSearch()" id="btn" type="submit" class="btn">Search</button>
+            </form>
+            <h2 class="search-results">
+                <span id="city-search-term"></span>
+            </h2>
+            <div id="city-container" class="list-group"></div>
+        </div>
+
+        <!-- weather cards -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8" id="main-card"></div>
+            </div>
+        </div>
+        <!-- weather card and 5-day forecast goes here -->
+        <div  class="card-75">
+
+            <div id="tempText" class="temp-text"></div>
+            <p class="humid-text"></p>
+            <p class="wind-text"></p>
+            <p class="uv-text"></p>
+
+
+        </div>
+        <div id="5-day-forecast" class="row">
+
+
+        </div>
+        </div>
+
+    </main>
+
+
+    <script src="./assets/styling/weather.js"></script>
+
+</body>
+
+</html>

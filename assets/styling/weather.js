@@ -42,6 +42,9 @@ function myFunction() {
             return fetch(
                 "http://api.openweathermap.org/data/2.5/uvi?appid=" + apiKey + "&lat=" + cityLat + "&lon=" + cityLon
             )
+            .then(function (uvResponse) {
+                return uvResponse.jason
+            })
 
 
             // var placeMainCardIconEl
